@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky</title>
+
+    <style>
+        .mainPara {
+            position:sticky;
+            background-color: yellowgreen;
+            top: 0px;
+        }
+        .parent{
+            display: inline;
+            overflow: hidden;
+        }
+        .childPara{
+            position: sticky;
+            background-color: red;
+            top: 0px;
+            /* overflow-y: auto; */
+            overflow-y: auto;
+            z-index: 99999;
+        }
+    </style>
+</head>
+<body>
+    <h1> Example for sticky </h1>
+    <p class="mainPara">This is an Example of position: Sticky</p>
+    <div class="parent">
+        <p class="childPara">This is an another way of posion: sticky</p>
+    </div>
+    <p>This is an Example of position: Sticky</p>
+    <p>This is an Example of position: Sticky</p>
+    <p>This is an Example of position: Sticky</p>
+    <p>This is an Example of position: Sticky</p>
+    <p >This is an Example of position: Sticky</p>
+
+</body>
+</html>
+
+html
+CSS
+javascript
+
+                    - Angular
+                    - ReactJS
+                    - vueJS
+                    - nodeJS
+                    
+typescript
+
+
+<!--
+    100%
+
+    if(height of screen is 50%){
+        document.HTMLElement. = sticky
+    }
+-->

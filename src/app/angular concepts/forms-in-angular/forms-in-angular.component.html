@@ -1,0 +1,114 @@
+<div class="container" style="margin-top: 50px;">
+    <h1>Example of Template-driven Forms :</h1>
+    {{contactForm.value | json}}
+    <hr>
+    <form class="row g-3" #contactForm="ngForm"  (ngSubmit)="onSubmit(contactForm)">
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" ngModel required #Cemail="ngModel">
+          {{Cemail.dirty}}
+          <div>
+            <small *ngIf="Cemail.invalid && Cemail.touched" style="color: red;">Email is required.</small>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" ngModel>
+        </div>
+        <div class="col-12">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" class="form-control" id="address" placeholder="1234 Main St" name="address" ngModel>
+        </div>
+        <div class="col-12">
+          <label for="address2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="address2" placeholder="Apartment, studio, or floor" name="address2" ngModel>
+        </div>
+        <div class="col-md-6">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" name="city" ngModel>
+        </div>
+        <div class="col-md-4">
+          <label for="state" class="form-label">State</label>
+          <select id="state" class="form-select" name="state" ngModel>
+            <option selected>Choose...</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="zip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="zip" name="zip" ngModel>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" ngModel>
+            <label class="form-check-label" for="gridCheck" name="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Sign in</button>
+        </div>
+      </form>
+</div>
+
+
+<!-- Step 1 -->
+<div class="container" style="margin-top: 20px;">
+    <h1>Model-Driven form  ====>>>>>> Reactive form</h1>
+    {{contactform.value | json}}
+    <hr>
+
+    <form class="row g-3" [formGroup]="contactform" (ngSubmit)="getContactform()">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" formControlName="email">
+          <div *ngIf="contactform.get('email')?.invalid && contactform.get('email')?.touched">
+            <small style="color: red;">Email field is required.</small>
+            <div style="color: red;">Email name should start with number.</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" formControlName="password">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </form>
+</div>
+
+

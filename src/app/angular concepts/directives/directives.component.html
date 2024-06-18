@@ -1,0 +1,135 @@
+<p >directives works!</p>
+<!-- attribute binding to bind dynamic classes in angular -->
+<!-- <h1  class ="directiveStyles">{{title}}</h1>
+
+<h1  [class] ="isAvailable? 'directiveStyles':'notAvailable'">{{title}}</h1>
+<h1 [class]="['directiveStyles', 'notAvailable', 'border']">Hello World!!!</h1>
+<h1 [class]="{notAvailable:isAvailable, border:isUserAvailable}">Hello World 2 !!</h1>
+<h1 [class.border]="true">Hello world 3 !!!</h1> -->
+
+<!-- <h1 style="color: yellowgreen">Style example 1</h1>
+
+<h1 [style]="isAvailable? 'color:red': 'color: black'">Style example 2</h1>
+<h1 [style]="isAvailable? available: notAvailable">Style example 3</h1>
+<h1 [style.color]="'blue'" [style.border]="'1px solid red'">Hello styles</h1> -->
+
+
+<!-- @if(isDirective){
+<h1 >welcome to directives in angular</h1>
+}@else{
+    <h1> Welcome to Pipes in angular</h1>
+}
+
+<h1 *ngIf="isDirective; else content">welcome to directives in angular previous version other than V17</h1>
+<ng-template #content> Welcome to directives in angular 17</ng-template>
+
+@if(isDirective){
+    <h1 >welcome to directives in angular previous version other than V17</h1>
+}@else {
+    <h1 >welcome to directives in angular 17</h1>
+}
+
+
+<div *ngFor="let emp of employeeDtails">
+    <ol>
+        <li >{{emp}}</li> 
+    </ol>
+</div>
+
+@for( emp of employeeDtails; track emp){
+    <ol>
+        <li >{{emp}}</li> 
+    </ol>
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>doj</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td customselector>{{employeeDetails2[0].name}}</td>
+        </tr>
+        <tr *ngFor="let emp of employeeDetails2">
+            <td>{{emp.name}}</td>
+            <td>{{emp.doj}}</td>
+        </tr>
+        @for(emp of employeeDetails2; track emp.name){
+        <tr>
+            <td customattribute>{{emp.name}}</td>
+            <td>{{emp.doj}}</td>
+        </tr>
+    }
+    </tbody>
+</table>
+{{employeeDetails2[3].doj}}
+@switch(employeeDetails2[3].doj){
+    
+    @case('demo 2'){
+        <b> Hello demo 2</b>
+    }
+    @case('demo 1'){
+        <b> Hello demo 1</b>
+    }
+    @case('demo 3'){
+        <b> Hello demo 3</b>
+    }
+    @default{
+        <b> Hello demo </b>
+    }
+    
+}
+
+<div [ngSwitch]="'demo 7'">
+    <div *ngSwitchCase="'demo 3'">Hello user 3</div>
+    <div *ngSwitchCase="'demo 1'">Hello user 1</div>
+    <div *ngSwitchCase="'demo 2'">Hello user 2</div>
+    <div *ngSwitchDefault [ngStyle]="isDirective? notAvailable: available">Hello default</div>
+
+</div> -->
+
+
+<!-- <h1 [ngStyle]="isAvailable? 'color:red': 'color: black'">Style example 2</h1> -->
+<h1 [ngStyle]="isAvailable? available: notAvailable">Style example 3</h1>
+<!-- <h1 [ngStyle.color]="'blue'" [ngStyle.border]="'1px solid red'">Hello styles</h1> -->
+<div>
+<h1  [ngClass] ="isAvailable? 'directiveStyles':'notAvailable'">{{title}}</h1>
+<h1 [ngClass]="['directiveStyles', 'notAvailable', 'border']">Hello World!!!</h1>
+<h1 [ngClass]="{notAvailable:isAvailable, border:isUserAvailable}">Hello World 2 !!</h1>
+<!-- <h1 [ngClass.border]="true">Hello world 3 !!!</h1> -->
+</div>
+<p customselector>Hello custom directive</p>
+
+<p *customIf="iscustomdirectiveAvailable">This is Show Content</p>
+<button (click)="iscustomdirectiveAvailable = !iscustomdirectiveAvailable"> Toggle show content</button>
+
+
+
+<p customattribute>Hello Custom attribute directive in angular.</p>
+
+<p *customstructuraldemo="isStructuraldirective">Hello Custom Structural Directive in angular.</p>
+
+<button (click)="isStructuraldirective = !isStructuraldirective">Display</button>
+
+
+<h1>{{isAvailable }}</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

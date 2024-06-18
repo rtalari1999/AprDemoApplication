@@ -1,0 +1,363 @@
+Q1 Which version of Angular marked the shift from AngularJS to Angular?
+
+A Angular 2
+
+B Angular 4
+
+C Angular 5
+
+D Angular 6
+
+Answer:
+
+
+Q2 Angular is primarily maintained by which company?
+
+A Google
+
+B Facebook
+
+C Microsoft
+
+D Amazon
+
+Answer: A
+
+Q3 In Angular, which file is used to define the set of modules, components, and services?
+
+A app.module.ts
+
+B app.component.ts
+
+C angular.json
+
+D package.json
+
+Answer: A
+
+Q4 What does CLI stand for in Angular CLI?
+
+A Command Line Interaction
+
+B Command Line Interface
+
+C Command Language Interpretation
+
+D Command Link Interface
+
+Answer: B
+
+Q5 Which command is used to generate a new component in an Angular project?
+
+A ng generate service
+
+B ng generate component
+
+C ng create component
+
+D ng add component
+
+Answer: B
+
+Q6 To update Angular to a newer version, which command is used?
+
+A ng update
+
+B ng upgrade
+
+C ng new version
+
+D ng refresh
+
+Answer: A
+
+Q7 In Angular, which file is primarily responsible for defining npm packages for the project?
+
+A angular.json
+
+B package.json
+
+C config.json
+
+D app.module.ts
+
+Answer: B
+
+Q8 What is the purpose of the angular.json file in an Angular project?
+
+A Define components and services
+
+B Set up routing
+
+C Configure project-specific settings
+
+D List TypeScript files
+
+Answer: C
+
+Q9 Which command is used to serve an Angular application locally for development?
+
+A ng serve
+
+B ng start
+
+C ng run
+
+D ng develop
+
+Answer: A
+
+Q10 What is the output of the following Angular CLI command:
+ng g c my-component --flat?
+
+A A new component in a separate folder
+
+B A new component in the app folder
+
+C A new module
+
+D A new service
+
+Answer: B
+
+Q11 Which Angular CLI command would you use to add Angular Material to your project?
+
+A ng add @angular/material
+
+B ng install @angular/material
+
+C ng generate @angular/material
+
+D ng setup @angular/material
+
+Answer: A
+
+Q12 Identify the correct command to create a new Angular project with SCSS as the stylesheet format.
+
+A ng new my-app --style=scss
+
+B ng create my-app --scss
+
+C ng generate app my-app --style=scss
+
+D ng new my-app --css=scss
+
+Answer: A
+
+Q13 Identify the issue when the Angular CLI command ng serve shows the error "Could not find module "@angular/core" ".
+
+A Missing @angular/core module
+
+B Incorrect command syntax
+
+C Outdated Angular CLI version
+
+D Issues with angular.json
+
+Answer: A
+
+Q14 During project setup, if ng serve fails with the error "Local workspace file ('angular.json') could not be      
+    found",what is the likely issue?
+
+A The angular.json file is missing or misplaced
+
+B Incorrect Angular version
+
+C Syntax error in angular.json
+
+D Problems with node_modules
+
+Answer: A
+
+Q15 What is a component in Angular?
+
+A A CSS stylesheet
+
+B A routing configuration
+
+C A building block of Angular UI
+
+D A server-side script
+
+Answer: A
+
+Q16 Which file extension is used for Angular component templates?
+
+A .html
+
+B .css
+
+C .ts
+
+D .js
+
+Answer: A
+
+Q17 In Angular, how do you bind a component's class property to an element in its template?
+
+A {{ }}
+
+B [ ]
+
+C ( )
+
+D [( )]
+
+Answer: B
+
+Q18 What is the purpose of the @Component decorator in Angular?
+
+A To define a service
+
+B To declare a class as an Angular component
+
+C To configure routing
+
+D To create a directive
+
+Answer: B
+
+Q19 Which Angular feature is used to display data in a component template dynamically?
+
+A Directives
+
+B Services
+
+C Modules
+
+D Pipes
+
+Answer: A
+
+Q20 How do you apply a CSS class conditionally to an element in Angular?
+
+A Using the [class] binding
+
+B Using the [style] binding
+
+C Using @Input
+
+D Using @Output
+
+Answer: A
+
+Q21 In Angular's reactive forms, which class represents a group of FormControls?
+
+A FormGroup
+
+B FormControlArray
+
+C FormControl
+
+D FormBuilder
+
+Answer: A
+
+Q22  What is the primary use of the HttpClient service in Angular?
+
+A Managing local state
+
+B Interacting with RESTful APIs
+
+C Styling components
+
+D Handling authentication
+
+Answer: B
+
+Q23 In an Angular template, what is the purpose of the *ngIf directive?
+
+A To repeat a section of UI
+
+B To hide or show a section of UI conditionally
+
+C To create a reference to an element
+
+D To apply a CSS class
+
+Answer: B
+
+Q24 If an Angular component's template displays nothing where dynamic content should be, what might be the problem?
+
+A The component is not declared in a module
+
+B The data binding is incorrect
+
+C The directive is misspelled
+
+D The service is not connected
+
+Answer: B
+
+Q25 What could cause an error if a template variable is undefined in an Angular component's template?
+
+A Missing import in the component class
+
+B Incorrect syntax in the template
+
+C The variable is not declared in the class
+
+D The module is not imported
+
+Answer: C
+
+Q26 When encountering the error "Can't bind to 'ngModel' since it isn't a known property of 'input'",
+    what is the likely cause?
+
+A The FormsModule is not imported
+
+B The BrowserModule is not imported
+
+C The component is not declared in the NgModule
+
+D The Angular version is outdated
+
+Answer: A
+
+Q27 Which directive is used for two-way data binding in Angular forms?
+
+A ngModel
+
+B ngBind
+
+C ngControl
+
+D ngForm
+
+Answer: A
+
+Q28 What is the difference between structural and attribute directives in Angular?
+
+A Structural directives alter layout, attribute directives alter appearance
+
+B Structural directives alter behavior, attribute directives alter layout
+
+C Structural directives add or remove elements, attribute directives change the appearance of elements
+
+D Structural directives are built-in, attribute directives are custom
+
+Answer: C
+
+Q29 In Angular, what is the primary purpose of the [ ] syntax in templates?
+
+A To define a variable
+
+B To bind a property
+
+C To execute a function
+
+D To declare an array
+
+Answer: B
+
+Q30 How do you use a pipe in Angular?
+
+A {{ value | pipeName }}
+
+B [value | pipeName]
+
+C {{ value } & pipeName}
+
+D {{ value: pipeName }}
+
+Answer: A

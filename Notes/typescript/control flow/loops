@@ -1,0 +1,7 @@
+What is for loop?
+========================
+    - for loop repeats a group of statements until a specified condition evaluates 
+      to false. 
+    - he for loop allows us to specify an initialization expression, condition, and 
+      final expression as part of the loop syntax.
+      

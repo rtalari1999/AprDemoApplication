@@ -1,0 +1,20 @@
+p{
+    border:1px solid black;
+    padding: 4px;
+}
+
+p.main{
+    background-color: yellowgreen;
+    position: sticky;
+    top: 10px;
+}
+.maindiv{
+    display: flex;
+    height: 100px;
+}
+
+p.main1{
+    color:red;
+    position: sticky;
+    top: 0px;
+}

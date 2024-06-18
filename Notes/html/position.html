@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <link href="position.css" rel="stylesheet">
+</head>
+<body>
+    <h1 id="header1"> POSITION PROPERTY IN CSS</h1>
+
+    <p>This is a normal paragraph.</p>
+    <p class="main">This  paragraph is positioned using postion value.</p>
+    <p>This is a normal paragraph.</p>
+
+
+
+    <div class="maindiv">
+    
+        <p class="main1">This  paragraph is positioned using postion value.</p>
+    </div>
+
+
+    <p>This is a normal paragraph.</p>
+    <p >This  paragraph is positioned using postion value.</p>
+    <p>This is a normal paragraph.</p>
+
+
+    <br>
+    <br>
+    <hr>
+</body>
+</html>
+
+
+
+What is Position property in CSS?
+=================================
+    - The CSS position property is used to define the position of an element on a webpage.
+
+    - The location of the positioned element is set with the four properties:
+        - top
+        - right
+        - bottom
+        - left
+
+    The position property has the following five values:
+        1. static
+        2. relative
+        3. absolute
+        4. fixed
+        5. sticky
+
+    1. CSS static Position
+    =======================
+        - The static value of the position property allows elements to be positioned accordingly to the normal flow of the document. 
+        - The static position is not affected by the top, right, bottom, and left values.
+    Note: The static value is the default value for the position property.
+
+    2. CSS Relative Position
+        - The relative value positions the element relative to the original position in the document. 
+        - The element is positioned with the top, right, bottom, and left values.
+        Note: The space is preserved in the original position of the element.
+    3. absolute:
+    ==============
+        - The absolute value removes the element completely from its normal flow in the document.
+        
+
+    4. CSS fixed Position
+    ======================
+        - The fixed value positions an element to remain fixed in the same position, even when the page is scrolled. 
+        - It is similar to the absolute value, but it remains relative to the viewport at all times.
+
+    5. CSS sticky Position
+    ========================
+        - The sticky value positions the element as a combination of relative and fixed values.
+
+        - The sticky position behaves like relative positioning until the element reaches a certain scroll point on the screen. 
+        - After that, the element sticks to the top of the viewport like a fixed element.

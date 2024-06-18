@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <meta name="HTML" content="This document contains html notes">
+    <title>Document</title>
+    <link href="forms.css" rel="stylesheet">
+<!--  second way of incliding CSS in Webpage i.e internal CSS-->
+    <style>
+        /* h1 { color:yellow; background-color: lightgray; } */
+
+        /* label {color:gray} */
+
+        /* selector {property:value} */
+    </style>
+    
+</head>
+<body>
+
+    <p class="course">This CSS course contains basics to advanced</p>
+    <p >This CSS course contains basics to advanced</p>
+
+    <h2>Html</h2>
+    <p>Course is completed</p>
+    <div>Next is CSS</div>
+
+<!-- Examples for identifier(id) and class selectors/attributes-->
+    <h1 id="html" class="bluecolor bgColor">HTML Course</h1> 
+    <h1 id="css" class="bluecolor">CSS Course</h1>
+    <h1 id="typescript" class="bluecolor">TypeScript Course</h1>
+    <h1 id="angular" class="bluecolor bgColor">Angular Course</h1> 
+    <hr>
+
+<!--  First way of incliding CSS in Webpage i.e inline  CSS-->
+
+    <h1 > Course Enrollment Application</h1>
+    <br>
+
+<!-- Forms in HTML-->
+    <form>
+
+        <!-- Creating Input fields-->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+
+        <!-- Creating radio buttons -->
+        <label for="gender">gender:</label>
+        <input type="radio" id="gender" name="Male">
+        <label for="gender">Male</label>
+
+        <input type="radio" id="gender" name="Female">
+        <label for="gender">Female</label><br>
+        <br>
+
+        <!-- creating check boxes-->
+        <label for="course">Select Courses:</label>
+        <input type="checkbox" name="course" id="course">
+        <br><br>
+
+        <!-- Creating comment box-->
+        <label for="message">Comment</label><br>
+        <textarea name="message" id="message" rows="4" cols="30"></textarea>
+        <br><br>
+
+        <!--Creating dropdown -->
+        <label for="country" >Country:</label><br>
+        <select name="country" id="country">
+            <option>Select an option</option>
+            <option>IND</option>
+            <option>USA</option>
+            <option>Canada</option>
+        </select>
+        <br>
+        <br>
+
+        <input type="button" name="button" value="submit" >
+    </form>
+
+<!-- Header inHTML -->
+    <h1>JSON Object</h1>
+
+<!-- Forms data could be constructed as below and sent to database in below format -->
+    { name: 'xyz', gender: 'M/F' , course:Angular, message:'Angular course has started',country: 'IND'}
+
+</body>
+</html>
+
+<!-- {
+    name: demo,
+    gender: Male
+} -->

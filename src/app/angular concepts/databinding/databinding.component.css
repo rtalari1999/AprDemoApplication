@@ -1,0 +1,21 @@
+.userName {
+    color:brown;
+}
+.notUser{
+    color: red
+}
+.searchfield, .inputField, button {
+    padding: 10px;
+    margin: 2px;
+}
+.result{
+    font-size: large;
+    padding: auto;
+    margin: 2px;
+}
+.ngfor{
+    padding: 20px;
+    font-size: 20px;
+    gap: 5px;
+    margin-bottom: 5px;
+}

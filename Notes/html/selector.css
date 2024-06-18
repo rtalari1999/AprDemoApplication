@@ -1,0 +1,56 @@
+/**** Element selector *** */
+
+h1 {
+    color:red;
+}
+
+/* button:hover {
+    color:white !important;
+    background-color:cornflowerblue ;
+} */
+
+button{
+    /* padding: 1px 10px 15px 20px; */
+    padding-top: 1px;
+    padding-right: 10px;
+    /* padding-bottom: 15px; */
+    padding-left: 20px; 
+    /* margin: 10px 5px 8px 7px; */
+    margin :5px;
+
+    /* border-style: dotted;
+    border-width: 2px;
+    border-color: red; */
+    border: 1px red dotted;
+    color:yellowgreen;
+    background-color: lightgrey;
+    font-size: 60px;
+
+}
+
+/***  Id selector */
+
+
+#header1 {
+    color:green;
+    padding: 5px;
+    border:solid 1px red;
+    margin: 2px;
+}
+
+/*** Class Selector */
+.head1 {
+    color:orange;
+}
+
+/*** Universal Selector */
+
+*{
+    color:gray;
+}
+
+/**** Attribute Selector */
+
+h1[class] {
+    color:yellow;
+}

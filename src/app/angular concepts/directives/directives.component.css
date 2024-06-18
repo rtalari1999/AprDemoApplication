@@ -1,0 +1,12 @@
+.directiveStyles {
+    color: brown;
+    border: dotted 1px blue;
+}
+
+.notAvailable {
+    color: red;
+}
+
+.border {
+    border: solid 1px red;
+}

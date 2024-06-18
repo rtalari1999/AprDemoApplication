@@ -1,0 +1,46 @@
+
+/* CSS Rule for applying styles to a content*/
+
+/* selector { property: value} */
+
+/** Example for Element selector **/
+    label {color:red} */
+    h1 { color:green; background-color: lightgray; } 
+
+/* Example for id selector */
+
+    #html {color: blue}
+    #css { color:gray}
+    #typescript { color:yellow}
+    #angular { color:red} 
+
+
+/* Example for class  selector */
+    .bluecolor {color:blue}
+
+    .bgColor {
+        background-color: gray;
+    }
+
+/* Example for Universal selector */
+
+    * {
+        font-family:cursive;
+    }
+
+/* Example for group selector selector */
+    h2, div{
+        color: blue;
+        font-size: smaller;
+        background-color: azure;
+    }
+
+/* Example for Attribute selector */
+    p[class] {
+        color :red;
+    }
+
+
+
+
+

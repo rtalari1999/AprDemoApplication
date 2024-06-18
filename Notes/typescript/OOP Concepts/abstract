@@ -1,0 +1,30 @@
+## What is Abstract in typescript ?
+=======================================
+    1. Abstract classes are a powerful feature in TypeScript, a popular typed superset of javascript.
+    2. They provide a way for developers to define the structure of a class without implementing all of its methods.
+    3. Abstract class is a class that can not be instantiated on its own. instead, it serves as template or blueprint for other classes to extend and implement.
+    4. To use abstract class in typescript, you must first define it with abstract keyword.
+
+    Example:
+    ==========
+        abstract class Animal {
+            abstract makeSound():void;
+            move():void {
+                console.log("Animal moving");
+            }
+        }
+        Note: Here, Animal class is abstract class that has one abstract method(makeSound) and one non-abstract method(move).
+    5. The abstract method move, on the other hand, has a default implementation that will be used by all classes that extend the Animal class unless they choose to override it.
+
+    6. To use above abstract class, you can create a new class that extends the abstract class and implements its abstract methods.
+    Example:
+    ==========
+        class Dog extends Animal {
+            makeSound():void {
+                console.log("woof");
+            }
+        }
+
+        class Cat extends Animal {
+            makeSound(): void console.log("Meow!")
+        }

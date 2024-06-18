@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": "f9e0",
+      "title": "A Title",
+      "views": 2500
+    },
+    {
+      "id": "9cdf",
+      "title": "A book",
+      "views": 200
+    },
+    {
+      "id": null,
+      "title": "two books",
+      "views": 400
+    },
+    {
+      "id": "3",
+      "title": "third new title added",
+      "views": 300
+    },
+    {
+      "id": "3",
+      "title": "third Title",
+      "views": 300
+    },
+    {
+      "id": "3",
+      "title": "third Title",
+      "views": 300
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": null
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "empDetails": {
+    "name": "typicode"
+  }
+}

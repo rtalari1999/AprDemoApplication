@@ -1,0 +1,57 @@
+<h1>Interpolation binding Example in angular</h1>
+================================================================
+<h1>Course Name is : {{courseName}}</h1>
+<h1>{{5 > 1}}</h1>
+<h1>5 > 1</h1>
+
+<h2>Property binding Example in angular</h2>
+=============================================
+<br>
+<button type="submit" [disabled]=isActive>Login</button>
+<!-- <img [src]="couseImage" alt="Alternate info"> -->
+
+<!-- Event Binding -->
+<br><br>
+<label for="name" >Name :</label>
+<input type="string" (input)="userDetails($event)" [value]="userName">
+<div>User Name is : {{userName}}</div>
+
+
+<!-- Two way data binding i.e event binding -->
+<br><br>
+<label for="name" >Name :</label>
+<input type="text" [(ngModel)]="userName"><span>User Name: {{userName}}</span>
+
+
+
+<h1>Attribute binding Example in angular</h1>
+=================================================================
+<!-- Attribute binding -->
+<!-- 
+<h1 [class]="isUserName?  'notUser' : 'userName' "><span>Hello {{userName}},</span> Welcome to Angular 17 Course. </h1>
+<h1 [class]="[ 'userName', 'notUser']">hello class 1</h1>
+<h1 [class]="{userName: false, notUser: true}">hello class 1</h1>
+<h1 [class.userName]="false">hello class 1</h1> -->
+
+<!-- style binding -->
+
+<!-- <h1 [style.color]="'red'">Hello Style example 1</h1>
+<h1 [style]="colors">Hello Style example 1</h1>
+<h1 [style]="isUserName? colors: 'color:red'">Hello Style example 1</h1>
+<h1 [style]="['colors']">Hello Style example 1</h1> -->
+
+<h1>Attribute binding Example in angular</h1>
+=================================================================
+<!-- Attribute binding -->
+
+<!-- <h1 [ngClass]="isUserName?  'notUser' : 'userName' "><span>Hello {{userName}},</span> Welcome to Angular 17 Course. </h1>
+<h1 [ngClass]="[ 'userName', 'notUser']">hello class 1</h1>
+<h1 [ngClass]="{userName: false, notUser: true}">hello class 1</h1>
+<h1 [ngClass.userName]="false">hello class 1</h1> -->
+
+<!-- style binding -->
+
+<!-- <div >Hello Style example 1</div>
+<div [ngStyle]="colors">Hello Style example 1</div>
+<div [ngStyle]="isUserName? colors: 'color:red'">Hello Style example 1</div>
+<div [ngStyle]="['colors']">Hello Style example 1</div> -->

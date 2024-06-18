@@ -1,0 +1,94 @@
+## What is Inheritance?
+========================
+
+    1. Inheritance is acquiring all the variables and methods from one class to another class.
+    2. It helps to reuse the code and establish a relationship between different classes.
+          1. Parent class(Super or Base class)
+          2. Child class(Subclass or Derived class)
+    3. A class which inherits the properties is known as child class whereas a class whose properties are inherited is known as Parent class.
+    4. Typescript can be extented to to create new classes with inheritance, using the keyword extends.
+    5.
+
+    Example:
+    =========
+        class Animal {
+            name: string;
+            age: number;
+            canFly: boolean;
+
+            constructor(name: string, age: number, canFly: boolean){
+                this.name = name;
+                this.age = age;
+                canFly = caFly;
+            }
+        }
+
+        class Dog extends Animal {
+            // class Dog acquires all the properties and methods of class Animal
+        }
+
+
+
+   ## What is Super keyword in typescript ?
+   ========================================
+   1. Super keyword is used in classes to call the constructor or access the properties of a parent(superclass).
+   2. super keyword must be in forst line inside constructor.
+            this = this object(current class)
+            super = the parent
+   3. if any input parameters are in parent constructor then must pass same order of data type in super as arguments.
+   4. super keyword can be used in methods and constructors of child.
+
+
+   Example:
+   ========
+
+    class Animal {
+            name: string;
+            age: number;
+            canFly: boolean;
+
+            constructor(name: string, age: number, canFly: boolean){
+                this.name = name;
+                this.age = age;
+                canFly = caFly;
+            }
+        }
+
+        class Dog extends Animal {
+            eat: boolean;
+            constructor(name: string, age: number, canFly: boolean, eat:boolean ) {
+                super(name, age, canFly, eat);
+            }
+        }
+
+  ## What if Parent Constructor have parameters ?
+   ===============================================
+
+    1. When object is created for child class then we pass argments to the parent constructor 
+        OR ELSE
+         if we have constructor in child class also with some more extra parameters will send 
+         through child class object(instance) and inside constructor super keyword is used to 
+         invoke and send data to constructor of a parent.
+
+    2. if any input parameters are in parent constructor then must pass same order of data type in super as arguments.
+    3. super keyword can be used in methods and constructors of child.
+        Example:
+        =========
+            class Animal {
+                name: string;
+                age: number;
+                canFly: boolean;
+
+                constructor(name: string, age: number, canFly: boolean){
+                    this.name = name;
+                    this.age = age;
+                    canFly = caFly;
+                }
+            }
+
+            class Dog extends Animal {
+                eat: boolean;
+                constructor(name: string, age: number, canFly: boolean, eat:boolean ) {
+                    super(name, age, canFly, eat);
+                }
+            }

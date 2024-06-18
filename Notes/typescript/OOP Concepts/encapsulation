@@ -1,0 +1,174 @@
+## What is Encapsulation(Data Hiding) ?
+=======================================
+        1. A class can controll the visibility of its data members to members of other clasess.
+            This capability terned as Data Hiding or Encapsulation.
+
+        2. Object Oriented Uses the concept of access modifiers to implement the concept of Encapsulation.
+        The access modifiers define the visibility of a class's data members outside its defining class.
+
+        Use of access modifiers:
+        =======================
+        1. Access modifiers increases the security of the class members and prevents them from invalid use.
+        2. We can also use it to control the visibility of data members of a class.
+
+        Types of Access Modifiers ?
+        ===========================
+            1. public
+            2. Protected
+            3. private
+            4. readonly
+
+            1. Public access modifier.
+            ==========================
+                public variable or method can be accessed inside the class and  outside the class.
+                Example:
+                ========
+                    class Bank {
+                        manager: string;
+                        managerSalary: number;
+                    }
+
+                    const bank = new Bank();
+                    bank.manager; // valid
+
+
+            2. Private access modifier.
+            ============================
+                Private variable or method can be accessed with the class but not outside of the class.
+                Example:
+                =======
+            3. Protected access modifier.
+            =============================
+                Protected variable or method can be accessed within class, constructor and its sub class only.
+
+            4. readonly access modifier.
+            ============================
+                1. readonly variable or method can be accessed inside the class and outside the class but value can't assign.
+                2. readonly variable can be declared and  initialized.
+                3. if value need must have to initialize otherwise result is undefined
+                
+
+
+// public access modifier example
+class Bank {
+    manager: string;
+    public bankName: string;
+}
+
+//create object 
+const bank = new Bank();
+//we can access properties because by default variables are public that means 
+//there is no restriction to access public props and methods inside and outside of the class.
+bank.manager;
+bank.manager;
+//===========================================================================================================================
+
+//protected access modifier example
+
+class Bank1 {
+    protected manager: string;
+    bankName: string;
+}
+
+// create object 
+const bank1 = new Bank1();
+//can be accessed public props here bankname is public
+bank1.bankName;
+//can't access protected props because protected can be accessed inside class and sub class.
+// bank1.manager  // invalid or error
+
+//let's see how we can access protected variables and methods within  subclass.
+
+class Customer1 extends Bank1 {
+
+    display(manager:string): string{
+        this.manager = manager;
+       return  this.manager;
+    }
+}
+
+// create object for sub class
+const customer1 = new Customer1();
+//can be accessed public props here bankname is public
+customer1.bankName;
+//can't access protected props because protected can be accessed inside class and sub class.
+// bank1.manager  // invalid or error
+//call method to check output
+customer1.display('John');
+
+//=======================================================================================================================================
+
+
+//private access modifier example
+
+class Bank2 {
+    bankName: string;
+    protected manager: string;
+    private managerSalary: number;
+}
+
+// create object 
+const bank2 = new Bank2();
+//can be accessed public props here bankname is public
+bank2.bankName;
+//can't access Private props because Private can be accessed inside class only.
+// bank2.bankName;  // invalid or error
+
+//let's see how we can access Private variables and methods within  subclass.
+
+class Customer2 extends Bank2 {
+
+    display(): void{
+        //this.managerSalary // error because private variables we can access only inside defined class other than that error. 
+    }
+}
+
+// create object for sub class
+const customer2 = new Customer2();
+//can be accessed public props here bankname is public
+customer2.bankName;
+//can't access Private props because private can be accessed inside class.
+// bank1.managerSalary  // invalid or error
+//call method to check output
+customer2.display();
+
+//=======================================================================================================================================
+
+
+
+//readonly access modifier example
+
+class Bank3 {
+    readonly bankName: string;
+    protected manager: string;
+    private managerSalary: number;
+}
+
+// create object 
+const bank3 = new Bank3();
+//can be accessed readonly props here bankname
+bank3.bankName;
+//can access readonly props but can not assign value.
+// bank2.bankName = 'XYZ';  // invalid or error
+
+//let's see how we can access readonly variables and methods within  subclass.
+
+class Customer3 extends Bank3 {
+
+    display(): string{
+        return this.bankName  // but you can not assign value
+    }
+}
+
+// create object for sub class
+const customer3 = new Customer3();
+//can be accessed readonly props here  is bankname 
+customer3.bankName;
+//can't assign value to readonly props because can assigned while declaration after that we can not.
+//call method to check output
+customer3.display();
+
+//=======================================================================================================================================
+
+
+

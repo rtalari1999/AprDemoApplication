@@ -1,0 +1,51 @@
+
+<div class="container">
+<h1>Welcome to Services: unrelated components data sharing</h1>
+
+<br>
+<br>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Views</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empDetails">
+            <td>{{emp.id}}</td>
+            <td>{{emp.title}}</td>
+            <td>{{emp.views}}</td>
+            <td>
+                <button type="submit" class="btn btn-danger" (click)="deleteData(emp.id)" style="margin-right: 5px;">Delete</button>
+                <button type="submit" class="btn btn-success" (click)="updateContactform(emp)" >Update</button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <br><br>
+
+<h1>Create Title form</h1>
+  <form class="row g-3" [formGroup]="contactform">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Title</label>
+      <input type="text" class="form-control" id="inputEmail4" formControlName="title">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Views</label>
+      <input type="number" class="form-control" id="inputPassword4" formControlName="views">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" (click)="postData()">Submit</button>
+      <button type="submit" class="btn btn-primary" (click)="updateData()">Update</button>
+    </div>
+  </form>
+
+</div>
+
+

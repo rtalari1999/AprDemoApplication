@@ -1,0 +1,50 @@
+.htmlcourse{
+    border: 1px solid red;
+    padding: 5px;
+    color: gray;
+    background-color: orange;
+    margin: 5px;
+    width: fit-content;
+    height: 50px;
+
+    
+}
+
+div[class="div1"]{
+    background-color: cadetblue;
+    border: 1px solid black;
+    margin: 2px;
+    width: 25%;
+    height:100px;
+    display: inline-block;
+}
+div[class="div2"]{
+    background-color: lightgreen;
+    border: 1px solid black;
+    margin: 2px;
+    width: 25%;
+    height:100px;
+    display: inline;
+}
+span{
+    background-color: lightgreen;
+    border: 1px solid black;
+    margin: 2px;
+    width: 25%;
+    height:100px;
+    display: block;
+}
+
+ul.parent {
+    display:flex;
+    background-color: greenyellow;
+    padding: 0px;
+}
+
+li {
+    background-color: skyblue;
+    border: 1px solid black;
+    padding: 12px;
+    margin: 8px;
+    list-style:none;
+}

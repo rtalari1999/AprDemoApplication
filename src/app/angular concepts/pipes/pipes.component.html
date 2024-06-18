@@ -1,0 +1,318 @@
+<!-- <h1>{{title | titlecase}}</h1>
+<h1>{{title | uppercase}}</h1>
+<h2>{{date | date : 'short' }}</h2>
+<h2>{{date | date : 'medium' }}</h2>
+<h2>{{date | date : 'long' }}</h2>
+<h2>{{date | date : 'full' }}</h2>
+<h2>{{date | date : 'shortDate' }}</h2>
+<h1>{{salary | number : '7.0-4'  }}</h1>
+
+<h2>{{salary | currency : 'INR' : 'symbol':'1.0-0' }}</h2>
+<p>{{date | date: 'YYYY-MM-dd h:mm:ss a'}}</p>
+<hr> -->
+
+<!-- <h1>{{title | customPipe  }}</h1> -->
+<!-- <button type="button" class="btn btn-danger">submit</button>
+
+<div class="input-group flex-nowrap">
+    <span class="input-group-text" id="addon-wrapping">Hello</span>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+  </div> -->
+
+
+  <!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+  <button class="mat-button" type="submit">mat submit</button>
+  <button mat-fab extended>
+    
+    Home
+  </button> -->
+
+<!-- <div class="container">
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Search ...</mat-label>
+      <input matInput (keyup)="filterValue($event)" placeholder="search">
+    </mat-form-field></td>
+  </tr></table>
+  <table mat-table [dataSource]="dataSource | customPipe : filterText " class="mat-elevation-z8">
+
+     Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" 
+  
+    <!-- Position Column -->
+    <!-- <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container> -->
+  
+    <!-- Name Column -->
+    <!-- <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container> -->
+  
+    <!-- Weight Column -->
+    <!-- <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container> -->
+  
+    <!-- Symbol Column -->
+    <!-- <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container> -->
+  
+    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> -->
+
+  <!-- <button mat-fab extended type="submit" (click)="adddata()">Add New Data</button>
+
+  
+</div>
+
+
+<div class="container">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <p>
+      <label for="firstName">First Name</label>
+      <input class="form-control" type="text" name="firstName" id="firstName" ngModel>
+    </p>
+    <p>
+      <label for="lastName">Last Name</label>
+      <input class="form-control" type="text" name="lastName" id="lastName" ngModel>
+    </p>
+    <p>
+      <label for="email">Email</label>
+      <input class="form-control" type="email" name="email" id="email" ngModel>
+    </p>
+    <p>
+      <label class="form-check-label" for="gender">Gender</label>
+
+      <input class="form-check-input" type="radio" name="gender" id="gender" ngModel value="Male">
+
+    </p>
+    <p>
+      <label class="form-check-label" for="married">Married</label>
+      <input lass="form-check-input" type="checkbox" name="married" id="married" ngModel>
+    </p>
+    <p>
+      <label for="country">Country</label>
+      <select name="country" class="form-control" ngModel>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="Others">Others</option>
+      </select>
+    </p>
+    <p>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </p>
+  </form>
+</div> --> 
+
+
+<div class="container " style="margin-top: 20px;">
+  <h1>Table with custom filter using Pipes in Bootstrap</h1>
+  <hr>
+  
+    <div class="mb-3 col-5 row">
+      <label for="searchInput" class="col-sm-2 col-form-label">Search : </label>
+      <div class="col-sm-6 col-2">
+        <input type="text" class="form-control" id="searchInput" [(ngModel)]="searchText">
+      </div>
+    </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Symbol</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataSource | customPipe : searchText ">
+        <th scope="row">{{data.position}}</th>
+        <td>{{data.name}}</td>
+        <td>{{data.weight}}</td>
+        <td>{{data.symbol}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+  <p>
+    <button type="submit" class="btn btn-success" (click)="addNewData()">Add New Element</button>
+  </p>
+</div>
+
+
+
+<div class="container" style="margin-top: 40px;">
+  <h1>Table with custom filter using Pipes in Angular Material</h1>
+  <hr>
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Search</mat-label>
+      <input matInput [(ngModel)]="searchText">
+    </mat-form-field></td>
+  </tr></table>
+
+
+
+
+  <table mat-table [dataSource]="dataSource | customPipe : searchText" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="position"> 
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<div class="container" style="margin-top: 50px;">
+  <h1>Template-driven form in angular </h1>
+  {{contactForm.control.value | json}}
+  <hr>
+  <form class="row g-3" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email"  ngModel required email #email="ngModel">
+      <div>
+        <small *ngIf="email.invalid && email.touched" style="color: red;">Email is required field</small>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" ngModel required>
+      <div>
+        <small  style="color: red;">Password is required field</small>
+      </div>
+    </div>
+    <div class="col-12">
+      <label for="address" class="form-label">Address</label>
+      <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" ngModel>
+    </div>
+    <div class="col-12">
+      <label for="address2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="address2" name="address2" placeholder="Apartment, studio, or floor" ngModel>
+    </div>
+    <div class="col-md-6">
+      <label for="city" class="form-label">City</label>
+      <input type="text" class="form-control" id="city" name="city" ngModel>
+    </div>
+    <div class="col-md-4">
+      <label for="state" class="form-label">State</label>
+      <select id="state" name="state" class="form-select" ngModel>
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="zip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="zip" name="zip" ngModel>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck" name="checkout" ngModel>
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </form>
+</div>
+
+
+<div class="container" style="margin-top: 50px;">
+  <h1>Template-driven form in angular </h1>
+  {{contactForm.control.value | json}}
+  <hr>
+
+  <form class="row g-3" [formGroup]="contactform" (ngSubmit)="ngSubmit()">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" formControlName="email">
+      <div>
+        <small *ngIf="contactform.get('email')?.invalid && contactform.get('email')?.touched" style="color: red;">Email is required field</small>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+  
+  
+  
+  
